@@ -8,18 +8,22 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import RNByronDesign from 'react-native-design';
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
+import {ShadowView} from '@byron-react-native/design';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>☆RNByronDesign example☆</Text>
         <Text style={styles.instructions}>STATUS: loaded</Text>
         <Text style={styles.welcome}>☆☆☆</Text>
-        <RNByronDesign />
+        <ShadowView style={styles.shadow}>
+          <Text style={styles.welcome}>☆RNByronDesign example☆</Text>
+          <Text style={styles.instructions}>STATUS: loaded</Text>
+          <Text style={styles.welcome}>☆☆☆</Text>
+        </ShadowView>
       </View>
     );
   }
@@ -30,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#fff',
   },
   welcome: {
     fontSize: 20,
@@ -41,5 +45,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  shadow: {
+    height: 200,
+    width: 300,
+    marginVertical: 30,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    backgroundColor: '#fff',
+    borderRadius: 12
   },
 });

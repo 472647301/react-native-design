@@ -1,13 +1,15 @@
 {
-  "name": "react-native-design",
+  "name": "@byron-react-native/design",
   "title": "React Native Design",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "React Native Design",
   "main": "index.js",
   "files": [
     "README.md",
     "android",
     "index.js",
+    "index.d.ts",
+    "src",
     "ios",
     "react-native-design.podspec"
   ],
@@ -16,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-design.git",
-    "baseUrl": "https://github.com/github_account/react-native-design"
+    "url": "git+https://github.com/472647301/react-native-design.git",
+    "baseUrl": "https://github.com/472647301/react-native-design"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Byron",
+    "email": "byron.zhuwenbo@gmail.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
