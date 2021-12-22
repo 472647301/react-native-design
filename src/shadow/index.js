@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import { View, Platform } from "react-native";
 import { requireNativeComponent } from "react-native";
 
-const RNByronDesign = requireNativeComponent("RNByronDesign");
+const RNByronCardView = requireNativeComponent("RNByronCardView");
 
 class AndroidShadowView extends PureComponent {
   render() {
@@ -17,13 +17,13 @@ class AndroidShadowView extends PureComponent {
       }
     }
     return (
-      <RNByronDesign
+      <RNByronCardView
         {...this.props}
         cornerRadius={cornerRadius}
         cardElevation={cardElevation}
       >
         {this.props.children}
-      </RNByronDesign>
+      </RNByronCardView>
     );
   }
 }

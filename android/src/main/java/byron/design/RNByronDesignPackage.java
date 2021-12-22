@@ -23,6 +23,9 @@ public class RNByronDesignPackage implements ReactPackage {
     @NonNull
     @Override
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
-        return Arrays.<ViewManager>asList(new RNByronDesignManager());
+        return Arrays.<ViewManager>asList(
+                new RNByronCardViewManager(),
+                new RNByronWheelPickerManager()
+        );
     }
 }

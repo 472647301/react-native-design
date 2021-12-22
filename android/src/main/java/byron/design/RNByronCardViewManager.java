@@ -1,4 +1,4 @@
-// RNByronDesignManager.java
+// RNByronCardViewManager.java
 
 package byron.design;
 
@@ -12,9 +12,9 @@ import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.views.view.ReactViewGroup;
 
-public class RNByronDesignManager extends ViewGroupManager<RNByronCardView> {
+public class RNByronCardViewManager extends ViewGroupManager<RNByronCardView> {
 
-    public static final String REACT_CLASS = "RNByronDesign";
+    public static final String REACT_CLASS = "RNByronCardView";
 
     @NonNull
     @Override

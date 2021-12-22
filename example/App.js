@@ -9,21 +9,47 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import {ShadowView} from '@byron-react-native/design';
+import {Platform, StyleSheet, Text, View, Modal} from 'react-native';
+import {ShadowView, CommonPicker} from '@byron-react-native/design';
+
+const typeList = ['色情暴力', '违法内容', '广告骚扰', '侮辱谩骂', '其他'];
 
 export default class App extends Component {
+  state = {
+    visible: false,
+    type: '广告骚扰',
+  };
+
+  onCloseModal = () => {
+    this.setState({visible: false});
+  };
+  onPickerConfirm = vals => {
+    const val = vals[0] || '';
+    this.setState({type: val});
+    this.onCloseModal();
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>☆RNByronDesign example☆</Text>
-        <Text style={styles.instructions}>STATUS: loaded</Text>
-        <Text style={styles.welcome}>☆☆☆</Text>
         <ShadowView style={styles.shadow}>
-          <Text style={styles.welcome}>☆RNByronDesign example☆</Text>
+          <Text
+            style={styles.welcome}
+            onPress={() => this.setState({visible: true})}>
+            ☆RNByronDesign example☆
+          </Text>
           <Text style={styles.instructions}>STATUS: loaded</Text>
           <Text style={styles.welcome}>☆☆☆</Text>
         </ShadowView>
+        <Modal visible={this.state.visible} statusBarTranslucent={true}>
+          <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0.3)'}} />
+          <CommonPicker
+            pickerData={typeList}
+            selectedValue={[this.state.type]}
+            onPickerCancel={this.onCloseModal}
+            onPickerConfirm={this.onPickerConfirm}
+          />
+        </Modal>
       </View>
     );
   }
@@ -58,6 +84,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 5,
     backgroundColor: '#fff',
-    borderRadius: 12
+    borderRadius: 12,
   },
 });
