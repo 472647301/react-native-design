@@ -11,7 +11,8 @@
     "index.d.ts",
     "src",
     "ios",
-    "react-native-design.podspec"
+    "react-native-design.podspec",
+    "!android/**/build/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
