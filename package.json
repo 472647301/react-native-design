@@ -1,7 +1,7 @@
 {
   "name": "@byron-react-native/design",
   "title": "React Native Design",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native Design",
   "main": "index.js",
   "files": [
