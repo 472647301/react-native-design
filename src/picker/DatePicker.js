@@ -4,7 +4,7 @@
 
 import React, { PureComponent } from "react";
 import { Dimensions } from "react-native";
-import CommonPicker from "./CommonPicker";
+import { CommonPicker } from "./CommonPicker";
 import dayjs from "dayjs";
 
 export class DatePicker extends PureComponent {
